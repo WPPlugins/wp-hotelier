@@ -30,7 +30,7 @@ $is_available = $room->is_available( $checkin, $checkout );
 			 * hotelier_room_list_item_title hook
 			 *
 			 * @hooked hotelier_template_rooms_left - 10
-			 * @hooked hotelier_template_loop_room_title - 20
+			 * @hooked hotelier_template_room_list_title - 20
 			 */
 			do_action( 'hotelier_room_list_item_title', $is_available, $checkin, $checkout );
 		?>

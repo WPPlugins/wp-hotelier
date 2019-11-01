@@ -61,10 +61,11 @@ class HTL_Gateway_Paypal_Response {
 			$posted[ 'payment_status' ] = strtolower( $posted[ 'payment_status' ] );
 
 			// Sandbox fix
+			/*
 			if ( isset( $posted[ 'test_ipn' ] ) && 1 == $posted[ 'test_ipn' ] && 'pending' == $posted[ 'payment_status' ] ) {
 				$posted[ 'payment_status' ] = 'confirmed';
 			}
-
+			*/
 			HTL_Gateway_Paypal::log( 'Found reservation #' . $reservation->id );
 			HTL_Gateway_Paypal::log( 'Payment status: ' . $posted[ 'payment_status' ] );
 
